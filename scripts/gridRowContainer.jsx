@@ -20,7 +20,8 @@ var GridRowContainer = React.createClass({
         "parentRowCollapsedComponent": "▶",
         "parentRowExpandedComponent": "▼",
         "onRowClick": null,
-	    "multipleSelectionSettings": null
+	    "multipleSelectionSettings": null,
+      "resultsFromFilter": false
       };
     },
     getInitialState: function(){
@@ -29,6 +30,9 @@ var GridRowContainer = React.createClass({
            },
            "showChildren":false
         }
+    },   
+    componentDidMount: function(){
+        this.setShowChildren(this.props.resultsFromFilter);
     },
     componentWillReceiveProps: function(){
       this.setShowChildren(false);

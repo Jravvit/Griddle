@@ -35,7 +35,8 @@ var GridTable = React.createClass({
       "parentRowExpandedComponent": "▼",
       "externalLoadingComponent": null,
       "externalIsLoading": false,
-      "onRowClick": null
+      "onRowClick": null,
+      "resultsFromFilter": false
     }
   },
   getInitialState: function(){
@@ -157,6 +158,7 @@ var GridTable = React.createClass({
                 hasChildren={hasChildren}
                 tableClassName={that.props.className}
                 onRowClick={that.props.onRowClick}
+                resultsFromFilter={that.props.resultsFromFilter}
             />
           )
       });
