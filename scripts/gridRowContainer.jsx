@@ -32,13 +32,13 @@ var GridRowContainer = React.createClass({
         }
     },   
     componentDidMount: function(){
-        this.setShowChildren(this.props.resultsFromFilter);
+       // this.setShowChildren(this.props.resultsFromFilter);
     },
     componentWillReceiveProps: function(){
-      this.setShowChildren(true);
+      //this.setShowChildren(true);
     },
     toggleChildren: function(){
-      this.setShowChildren(this.state.showChildren === false);
+     // this.setShowChildren(this.state.showChildren === false);
     },
     setShowChildren: function(visible){
       this.setState({

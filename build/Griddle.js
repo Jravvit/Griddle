@@ -6956,13 +6956,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	  },
 	  componentDidMount: function componentDidMount() {
-	    this.setShowChildren(this.props.resultsFromFilter);
+	    // this.setShowChildren(this.props.resultsFromFilter);
 	  },
 	  componentWillReceiveProps: function componentWillReceiveProps() {
-	    this.setShowChildren(true);
+	    //this.setShowChildren(true);
 	  },
 	  toggleChildren: function toggleChildren() {
-	    this.setShowChildren(this.state.showChildren === false);
+	    // this.setShowChildren(this.state.showChildren === false);
 	  },
 	  setShowChildren: function setShowChildren(visible) {
 	    this.setState({
