@@ -6942,8 +6942,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "rowHeight": null,
 	      "parentRowCollapsedClassName": "parent-row",
 	      "parentRowExpandedClassName": "parent-row expanded",
-	      "parentRowCollapsedComponent": "",
-	      "parentRowExpandedComponent": "",
+	      "parentRowCollapsedComponent": "▶",
+	      "parentRowExpandedComponent": "▼",
 	      "onRowClick": null,
 	      "multipleSelectionSettings": null,
 	      "resultsFromFilter": false
@@ -6959,7 +6959,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.setShowChildren(this.props.resultsFromFilter);
 	  },
 	  componentWillReceiveProps: function componentWillReceiveProps() {
-	    //this.setShowChildren(false);
+	    this.setShowChildren(true);
 	  },
 	  toggleChildren: function toggleChildren() {
 	    this.setShowChildren(this.state.showChildren === false);
@@ -6992,7 +6992,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      columnSettings: this.props.columnSettings,
 	      rowSettings: this.props.rowSettings,
 	      hasChildren: that.props.hasChildren,
-
+	      toggleChildren: that.toggleChildren,
 	      showChildren: that.state.showChildren,
 	      key: that.props.uniqueId + '_base_row',
 	      useGriddleIcons: that.props.useGriddleIcons,
@@ -7785,7 +7785,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    getDefaultProps: function getDefaultProps() {
 	        return {
 	            "isChildRow": false,
-	            "showChildren": false,
+	            "showChildren": true,
 	            "data": {},
 	            "columnSettings": null,
 	            "rowSettings": null,

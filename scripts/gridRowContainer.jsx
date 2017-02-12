@@ -17,8 +17,8 @@ var GridRowContainer = React.createClass({
         "rowHeight": null,
         "parentRowCollapsedClassName": "parent-row",
         "parentRowExpandedClassName": "parent-row expanded",
-        "parentRowCollapsedComponent": "",
-        "parentRowExpandedComponent": "",
+        "parentRowCollapsedComponent": "▶",
+        "parentRowExpandedComponent": "▼",
         "onRowClick": null,
 	    "multipleSelectionSettings": null,
       "resultsFromFilter": false
@@ -35,7 +35,7 @@ var GridRowContainer = React.createClass({
         this.setShowChildren(this.props.resultsFromFilter);
     },
     componentWillReceiveProps: function(){
-      //this.setShowChildren(false);
+      this.setShowChildren(true);
     },
     toggleChildren: function(){
       this.setShowChildren(this.state.showChildren === false);
@@ -67,7 +67,7 @@ var GridRowContainer = React.createClass({
           columnSettings={this.props.columnSettings}
           rowSettings={this.props.rowSettings}
           hasChildren={that.props.hasChildren}
-        
+          toggleChildren={that.toggleChildren}
           showChildren={that.state.showChildren}
           key={that.props.uniqueId + '_base_row'}
           useGriddleIcons={that.props.useGriddleIcons}
